@@ -52,7 +52,7 @@ const Search = () => {
             </Form>
           </div>
         </Col>
-          <Row id='favorite' className='mt-5'>{input ? songs && songs.map(song => (<Songs song={song}/> )) : null}</Row>
+          <Row id='favorite' className='mx-auto'>{input ? songs && songs.map(song => (<Songs key={song.id} song={song}/> )) : null}</Row>
       </Row>
     )
 }

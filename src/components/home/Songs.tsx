@@ -1,9 +1,9 @@
 import Song from "../../interfaces"
-import { Card, Row, Col } from "react-bootstrap"
+import { Card, Col } from "react-bootstrap"
 import { Link } from "react-router-dom"
 
 interface SongsProp {
-    song: Song
+    song: Song 
 }
 
 const Songs = ({ song }: SongsProp) => {
