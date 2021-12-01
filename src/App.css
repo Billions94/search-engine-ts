@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+body {
+ background: url(https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZWxlY3Ryb25pYyUyMG11c2ljfGVufDB8fDB8fA%3D%3D&w=1000&q=80);
+ background-repeat: no-repeat;
+ background-size: 100%;
+
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -1,0 +1,23 @@
+.customBg {
+    background-color: black !important;
+}
+
+
+.home:hover{
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+
+.home:active {
+    border-bottom: 2px solid white !important;
+}
+
+.favorites:hover {
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.favorites:hover {
+    /* border-bottom: 2px solid white !important; */
+}
