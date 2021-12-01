@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .customBg {
     background-color: black !important;
 }
@@ -20,4 +22,8 @@
 
 .favorites:hover {
     /* border-bottom: 2px solid white !important; */
+}
+
+.customSpan {
+    font-family: 'Pacifico', cursive;
 }

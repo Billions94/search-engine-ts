@@ -3,8 +3,16 @@
 }
 
 .customInput {
-    border-radius: 20px !important;
-    
+    border-radius: 20px !important;   
+}
+
+#favorite {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+
+#favorite::-webkit-scrollbar {
+    display: none;
 }
 
 .customBordRad {

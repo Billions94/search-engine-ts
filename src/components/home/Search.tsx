@@ -1,12 +1,36 @@
 import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './styles.css'
+import Songs from './Songs'
+import axios from 'axios'
+import Song from '../../interfaces'
+
+
+
 
 const Search = () => {
 
+    const [songs, setSongs] = useState<Song[]>([])
     const [input, setInput] = useState('')
+
+    const getSongs = async (input: string) => {
+        try {
+            const  { data: { data } }  = await axios.get(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${input} `)
+            setSongs(data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    console.log('we are the songs',songs)
+
+    useEffect(() => {
+        getSongs(input)
+    }, [input])
+
+    
 
     return (
         <Row className='d-flex px-5'>
@@ -28,7 +52,7 @@ const Search = () => {
             </Form>
           </div>
         </Col>
-          {/* <Col md={7}>{input.text ? <Jobs /> : null}</Col> */}
+          <Row id='favorite' className='mt-5'>{input ? songs && songs.map(song => (<Songs song={song}/> )) : null}</Row>
       </Row>
     )
 }
