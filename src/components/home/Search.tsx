@@ -17,7 +17,8 @@ const Search = () => {
 
     const getSongs = async (input: string) => {
         try {
-            const  { data: { data } }  = await axios.get(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${input} `)
+            const  { data: { data } }  = await axios.get<{data: Song[]}>(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${input} `)
+            console.log(data)
             setSongs(data)
         } catch (error) {
             console.log(error)
